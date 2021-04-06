@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: gray;
+}
+
+.top-backgraund{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background-image: url("https://i.ibb.co/JKMw1gG/pattern-bg.png");
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height:30vh;
+}
+
+.title{
+    text-align:center;
+    margin: 20px 0;
+    color: white;
+    font-weight: 500;
+}
+
+form{
+    text-align:center;
+    position: relative;
+}
+
+input[type="text"] {
+    width: 80%;
+    height: 38px;
+    padding-right: 50px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    margin-left: -60px;
+    height: 60px;
+    width: 60px;
+    background: black;
+    border: 0;
+    -webkit-appearance: none;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+}
+
+input:focus{
+    outline: none;
+}
+
+.arrow{
+    color:white;
+    position: absolute;
+    bottom: 35%;
+    right: 11%;
+}
+
+.card{
+    width:80%;
+    text-align:center;
+    margin: 0 auto;
+    padding: 15px 0;
+    background-color:white;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.list{
+    margin:15px;
+}
+
+.list span{
+    color:hsl(0, 0%, 59%);
+    font-size:12px;
+    font-weight: 500;
+    
+}
+
+.list h3{
+    font-weight: 500;
+    margin-top: 3px;
+}
