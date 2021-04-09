@@ -26,43 +26,48 @@
   </div>
   <div id="mapid"></div>
   <div class="card">
+    
     <div class="list">
       <span>IP ADDRESS</span>
       <h3><%= ip%></h3>
     </div>
+
+    
     <div class="list">
       <span>LOCATION</span>
       <h3><%= location%></h3>
     </div>
+
+    
     <div class="list">
       <span>TIMEZONE</span>
       <h3><%= timezone%></h3>
     </div>
+
     <div class="list">
       <span>ISP</span>
       <h3><%= isp%></h3>
     </div>
-
-    <div id="lat" data-test = <%= lat%>></div>
-    <div id="lng" data-test = <%= lng%>></div>
-    <div id="validation" data-test=<%=validation%>></div>
-    <div id="getIp" data-test=<%=getIp%>></div>
-    
-  </div>
   
+  </div>
+
+  <div id="lat" data-test = <%= lat%>></div>
+  <div id="lng" data-test = <%= lng%>></div>
+  <div id="validation" data-test=<%=validation%>></div>
+  <div id="getIp" data-test=<%=getIp%>></div>
 
 <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   var ip;
- new Promise ((resulve , reject) =>{
+ new Promise ((resolve , reject) =>{
   $.ajax({
     url:'https://api.ipify.org?format=json',
     type:'GET',
     success: (result)=>{
       console.log(result);
       ip=result.ip;
-      resulve();
+      resolve();
     },
     error:(error)=>{
       console.log(error);

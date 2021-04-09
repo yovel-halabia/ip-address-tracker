@@ -65,12 +65,14 @@ button:focus{
 } 
 
 .card{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     width:80%;
     text-align:center;
     margin: 0 auto;
     padding: 15px 0;
     background-color:white;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 15px;
 }
 
@@ -101,3 +103,72 @@ button:focus{
 .leaflet-control-zoom{
     display: none;
 }
+
+
+@media only screen and (min-width: 768px) {
+
+ input[type="text"] {
+    width: 40%;
+    height: 38px;
+    padding-right: 50px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+ .card{
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+ }
+
+ .list{
+    text-align:left;
+    position: relative;
+ }
+ .list:nth-child(-n+3):after{
+    content:"";
+    position:absolute;
+    top:10px;
+    left:110%;
+    width:1px;
+    height:80%;
+    margin-top:-1px;
+    background:hsl(0, 0%, 80%);
+ }
+
+ .list span{
+    font-size:12px;
+    
+}
+
+.list h3{
+    font-size:20px;
+}
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .list:nth-child(-n+3):after{
+       content:"";
+       position:absolute;
+       top:10px;
+       left:100%;
+       width:1px;
+       height:80%;
+       margin-top:-1px;
+       background:hsl(0, 0%, 80%);
+    }
+   
+    .list span{
+       font-size:14px;
+       
+   }
+   
+   .list h3{
+       font-size:26px;
+   }
+   
+   }
