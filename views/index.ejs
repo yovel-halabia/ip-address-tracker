@@ -46,16 +46,41 @@
     <div id="lat" data-test = <%= lat%>></div>
     <div id="lng" data-test = <%= lng%>></div>
     <div id="validation" data-test=<%=validation%>></div>
+    <div id="getIp" data-test=<%=getIp%>></div>
     
   </div>
   
-</body>
+
 <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+  var ip;
+ new Promise ((resulve , reject) =>{
+  $.ajax({
+    url:'https://api.ipify.org?format=json',
+    type:'GET',
+    success: (result)=>{
+      console.log(result);
+      ip=result.ip;
+      resulve();
+    },
+    error:(error)=>{
+      console.log(error);
+    }
+  });
+ }).then(()=>{
+  var getIp = document.getElementById('getIp').dataset.test;
+  if(getIp === "true"){
+    window.location= '/'+ip;
+  }
+ })
+  
+
   var validation = document.getElementById('validation').dataset.test;
   if(validation === "true"){
     alert("invalid IP");
   }
+
   var lat = document.getElementById('lat').dataset.test;
   var lng = document.getElementById('lng').dataset.test;
   var mymap = L.map('mapid').setView([lat, lng], 13);
@@ -76,5 +101,6 @@ btn.addEventListener("click",()=>{
 
 
 </script>
+</body>
 
 </html>
