@@ -6,7 +6,7 @@
 
 
 ## Technologies Used
-![Skills](https://skills.thijs.gg/icons?i=nodejs)
+![Skills](https://skillicons.dev/icons?i=js,html,css,nodejs)
 
 
 ## Setup
